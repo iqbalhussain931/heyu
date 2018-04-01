@@ -9,7 +9,7 @@
         <ion-list padding no-lines class="middle">
             <h1 class="logo-text">HeyU</h1>
             <p class="logo-slogan">Chat Free With Your Friends</p>
-            <form [formGroup]="registerForm" (ngSubmit)="onRegister(registerForm.value)" #form="ngForm">
+            <form padding [formGroup]="registerForm" (ngSubmit)="onRegister(registerForm.value)" #form="ngForm">
               <ion-item class="inner">
                 <ion-input type="text" required="" formControlName="name" placeholder="Name"></ion-input>
               </ion-item>

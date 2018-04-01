@@ -11,7 +11,7 @@
       <ion-list padding no-lines class="middle">
           <h1 class="logo-text">HeyU</h1>
           <p class="logo-slogan">Chat Free With Your Friends</p>
-          <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)" #form="ngForm">
+          <form padding [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)" #form="ngForm">
               <ion-item class="inner">
                 <ion-input type="email" required="" formControlName="email" placeholder="Email"></ion-input>
               </ion-item>
