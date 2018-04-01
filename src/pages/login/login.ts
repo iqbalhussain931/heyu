@@ -43,7 +43,7 @@ export class LoginPage {
 
   ionViewWillLoad() {
     let loginStatus = this.authService.userLoggedIn();
-    if(!loginStatus) { this.navCtrl.setRoot(HomePage); }
+    //if(!loginStatus) { this.navCtrl.setRoot(HomePage); }
   }
   // ngOnInit() {
   //   let loginStatus = this.authService.userLoggedIn();
