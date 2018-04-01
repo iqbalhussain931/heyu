@@ -1,6 +1,6 @@
 {
   "name": "task-manager",
-  "app_id": "",
+  "app_id": "6c17a161",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
