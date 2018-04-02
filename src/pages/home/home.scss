@@ -7,6 +7,9 @@
             background-color: #ffffff;
             border-bottom: 1px solid #e0e0e0;
         }
+        ion-list{
+            padding-top: 10px;
+        }
         .edit-link{
             font-size: 90%;
             color: #345995;
@@ -25,40 +28,84 @@
             font-weight: normal;
             text-shadow: 0px 0px 3px rgba(52, 89, 149, 0.370588);
         }
+        ion-item-sliding{
+            margin: 5px 0px;
+            &.active-slide{
+                ion-item{
+                    background-color: #f8f8f8;
+                }
+            }
+        }
+        ion-item-options{
+            border: none;
+            button{
+                width: 45px;
+                &.item-message-more{
+                    background-color: #e6e6e6;
+                    ion-icon{
+                        color: #000000;
+                    }
+                }
+                &.item-message-delete{
+                    background: -webkit-linear-gradient(#345995, #607393);
+                    ion-icon{
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
         ion-item{
             border-bottom: none !important;
+            .item-message-inner{
+                //display: flex;
+                margin-top: 4px;
+            }
+            ion-row{
+                position: relative;
+            }
             .item-inner{
                 padding-right: 0px !important;
+                border-bottom: none !important;
             }
             ion-label{
                 margin-right: 0px;
+                margin: 0px;
             }
             .item-image {
                 vertical-align: middle;
                 display: inline-block;
                 img{
-                    width: 45px;
-                    height: 45px;
+                    max-width: 100%;
+                    max-width: 40px;
                 }
             }
             .item-message{
                 // vertical-align: middle;
-                padding-left: 10px !important;
+                padding-left: 3px !important;
                 b{
                     font-size: 90%;
                     color: #363636;
                     display: block;
                     line-height: 100%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
                 span{
-                    font-size: 70%;
+                    font-size: 65%;
                     color: #b9b9b9;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: inline-block;
                 }
             }
             .item-time{
                 vertical-align: top;
                 font-size: 70%;
                 color: #b9b9b9;
+                text-align: right;
+                position: absolute;
+                top: 0px;
+                right: 0px;
             }
         }
     }
