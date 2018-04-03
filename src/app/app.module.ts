@@ -10,6 +10,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
+import { MessagesPage } from '../pages/messages/messages';
+import { GroupsPage } from '../pages/groups/groups';
 import { FIREBASE_CONFIG } from '../config/firebase.config';
 import { AuthProvider } from '../providers/auth/auth';
 import { HttpClientModule } from '@angular/common/http';
@@ -21,6 +23,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     HomePage,
     LoginPage,
     RegisterPage,
+    MessagesPage,
+    GroupsPage,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +41,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     HomePage,
     LoginPage,
     RegisterPage,
+    MessagesPage,
+    GroupsPage,
   ],
   providers: [
     StatusBar,
