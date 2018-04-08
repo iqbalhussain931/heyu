@@ -11,6 +11,7 @@
 
 <ion-content padding>
   <ion-item-sliding *ngFor="let contact of allContacts; let contactIndex = index">
-      <ion-item>{{ contact.displayName }}</ion-item>
+      <ion-item>Name : {{ contact.displayName }}</ion-item>
+      <ion-item>Number : {{ contact.phoneNumbers }}</ion-item>
   </ion-item-sliding>
 </ion-content>
