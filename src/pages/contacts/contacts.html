@@ -1,0 +1,16 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <span class="center-page-title">Contacts</span>
+      <ion-icon float-right name="search"></ion-icon>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item ngIf="allContacts" *ngFor=“let contact of allContacts”>
+    {{ contact.displayName }}
+  </ion-item>
+</ion-content>

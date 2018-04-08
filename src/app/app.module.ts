@@ -5,12 +5,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { Contacts } from '@ionic-native/contacts';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { MessagesPage } from '../pages/messages/messages';
+import { ContactsPage } from '../pages/contacts/contacts';
 import { GroupsPage } from '../pages/groups/groups';
 import { FIREBASE_CONFIG } from '../config/firebase.config';
 import { AuthProvider } from '../providers/auth/auth';
@@ -25,6 +27,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     RegisterPage,
     MessagesPage,
     GroupsPage,
+    ContactsPage,
   ],
   imports: [
     BrowserModule,
@@ -43,12 +46,14 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     RegisterPage,
     MessagesPage,
     GroupsPage,
+    ContactsPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
+    Contacts,
   ]
 })
 export class AppModule {}
