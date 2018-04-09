@@ -2,16 +2,88 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
+      <span float-left class="edit-link">Edit</span>
       <span class="center-page-title">Contacts</span>
-      <ion-icon float-right name="search"></ion-icon>
+      <ion-icon float-right name="add"></ion-icon>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 
-<ion-content padding>
-  <ion-item-sliding *ngFor="let contact of allContacts; let contactIndex = index">
+<ion-content no-padding>
+  <!-- <ion-item-sliding *ngFor="let contact of allContacts; let contactIndex = index">
       <ion-item>Name : {{ contact.displayName }}</ion-item>
       <ion-item>Number : {{ contact.phoneNumbers }}</ion-item>
-  </ion-item-sliding>
+  </ion-item-sliding> -->
+  <div class="search-box">
+      <ion-searchbar></ion-searchbar>
+  </div>
+  <div class="messages">
+    <ion-list>
+      <ion-row no-padding>
+        <ion-col col-12 no-padding>
+            <div padding-horizontal class="row-strip">
+              Online(<i>5</i>)
+            </div>
+        </ion-col>
+      </ion-row>
+      <ion-item no-padding class="online">
+        <ion-grid no-padding>
+          <ion-row no-padding>
+            <ion-col col-12>
+              <div padding-horizontal class="item-user">
+                <div class="item-user-img">
+                    <img src="../../assets/imgs/user-img-1.png" alt="">
+                    <span class="item-online-dot-box"><i class="item-online-dot"></i></span>
+                </div>
+                <div class="item-username">
+                  <b>Oswald Cobblepot</b>
+                </div>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+      <ion-item class="online" no-padding *ngFor="let a of fakeArray; let index = index">
+        <ion-grid no-padding>
+          <ion-row no-padding>
+            <ion-col col-12>
+              <div padding-horizontal class="item-user">
+                <div class="item-user-img">
+                    <img src="../../assets/imgs/user-img-1.png" alt="">
+                    <span class="item-online-dot-box"><i class="item-online-dot"></i></span>
+                </div>
+                <div class="item-username">
+                  <b>Barbara Kean</b>
+                </div>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+      <ion-row no-padding>
+        <ion-col col-12 no-padding>
+            <div padding-horizontal class="row-strip">
+              Others
+            </div>
+        </ion-col>
+      </ion-row>
+      <ion-item no-padding *ngFor="let a of fakeArray; let index = index">
+        <ion-grid no-padding>
+          <ion-row no-padding>
+            <ion-col col-12>
+              <div padding-horizontal class="item-user">
+                <div class="item-user-img">
+                    <img src="../../assets/imgs/user-img-1.png" alt="">
+                </div>
+                <div class="item-username">
+                  <b>Barbara Kean</b>
+                </div>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>
